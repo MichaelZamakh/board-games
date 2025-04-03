@@ -1,0 +1,548 @@
+@font-face {
+  font-family: 'ChunkFive';
+  src: url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.woff2') format('woff2'),
+       url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.woff') format('woff'),
+       url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato-regular';
+  src: url('../fonts/lato-web-font/lato-regular.woff') format('woff2');
+  src: url('../fonts/lato-web-font/lato-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url('../fonts/lato-web-font/lato-bold.woff') format('woff');
+}
+
+body{
+    margin: 0px;
+    background-color: #F6E5DC;
+  }
+
+* {
+    scroll-behavior: smooth;
+}
+
+
+  /* BACK TO TOP
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  font-size: 1.25rem;
+  border: none;
+  outline: none;
+  background-color: #B87561;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  font-family: lato-regular;
+}
+
+#myBtn:hover {
+  /*background-color: #555;*/
+}
+
+  /* NAV BAR
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  /*I followed a tutorial from Coding2GO YT channel to make the nav bar"*/
+  nav{
+    position: sticky;
+    background-color: #F5E9DF;
+    box-shadow: 0.1875em 0.1875em 0.3125em rgba(0, 0, 0, 0.1); 
+    min-height: 3.75em; 
+    display: flex;
+    align-items: center;
+    padding: 0 23em; 
+    margin-bottom: -1.5em; /* Makes smaller spacing between nav bar and category text */
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav ul{
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  nav li{
+    height: 3.7em;
+    /*padding: 0em 0em;*/
+  }
+  
+  nav a{
+    height: 100%;
+    padding: 0 1.25em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #653B2F;
+    font-family: lato-regular;
+    font-weight: normal;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+  }
+
+  .nav-home a:hover {
+    background-color: #B87561;
+    color: #000000;
+  }
+
+  .nav-speed a:hover {
+    background-color: #B6766F;
+    color: #000000;
+  }
+  
+  .nav-memory a:hover {
+    background-color: #79AD7C;
+    color: #000000;
+  }
+  
+  .nav-strategy a:hover {
+    background-color: #AE89C7;
+    color: #000000;
+  }
+  
+  .nav-creativity a:hover {
+    background-color: #EEA0AF;
+    color: #000000;
+  }
+  
+  .nav-spelling a:hover {
+    background-color: #68A0D0;
+    color: #000000;
+  }
+  
+  .nav-precision a:hover {
+    background-color: #CF946C;
+    color: #000000;
+  }
+
+  nav li:first-child{
+    margin-right: 0;
+  }
+
+nav ul li:last-child {
+    margin-left: auto;
+}  
+  .sidebar{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 15.625em;
+    z-index: 999;
+    background-color: #F5E9DF;
+    box-shadow: -0.625em 0 0.625em rgba(0, 0, 0, 0.1);
+    align-items: flex-start;
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+  
+  .sidebar li{
+    width: 100%;
+  }
+  
+  .sidebar a{
+    width: 100%;
+  }
+  
+  .x_icon{
+    fill: #653B2F;
+  }
+  
+  .menu_icon {
+    display: none;
+  }
+
+
+   /* HEADER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+  .jump-ahead {
+    font-family: 'lato-regular';
+    color: #653B2F;
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    max-width: 50em;
+    padding: 0 2em;
+  }
+
+  
+  .jump-ahead h3 {
+    margin-bottom: 0.25em;
+    font-size: 1.25rem;
+    font-family: lato-bold;
+  }
+  
+  .jump-ahead ul {
+    list-style: circle;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .jump-ahead li {
+    margin-bottom: 0.25em;
+    text-indent: 2em;
+  }
+  
+  .jump-ahead a {
+    text-decoration: none;
+    color: #1E6EDB;
+
+  }
+  
+  .jump-ahead a:hover {
+    text-decoration: underline;
+    transition: 1s;
+    color:#155AC0;
+    font-family: lato-bold;
+  }
+
+  a:hover {
+    transition: 1s;
+  }
+
+  
+  .indicator {
+    display: none;
+  }
+
+  .grid-container-for-header-section{
+    display: flex;
+    flex-direction: column;
+    gap: 5em; /*This changes spacing between the separate sections for each board game*/
+    margin: 0 auto;
+    max-width: 50em;
+    padding: 0 0.625em;
+    /*border: 1px solid red;*/
+    margin-bottom: 3em;
+  }
+
+.container-for-filter-conditions{
+  position: relative;
+  /*border: 1px solid red;*/
+  margin-bottom: 5em;
+}
+
+  .filter-condition-for-age {
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid red;*/
+    max-width: 50%;
+    padding: 0 2em;
+    position: absolute;
+    
+  }
+
+  .filter-condition-for-players {
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid red;*/
+    max-width: 50%;
+    padding: 0 0.625em;
+    margin-left: 3em;
+    position: absolute;
+    margin-left: 12em;
+  }
+
+.product-field ul {
+  list-style: none;
+}
+
+.filter-by-age,
+.filter-by-players {
+  font-family: 'Lato-bold';
+  font-size: 1.25rem;
+  color: #653B2F;  
+  margin-right: 1rem;
+}
+
+/*option {
+  font-size: 1.25rem;
+  font-family: 'Lato-regular';
+  color: #000000;
+}*/
+
+select {
+  font-size: 1.25rem;
+  font-family: 'Lato';
+  color: #000;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+  
+
+   /* BODY
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+ul.sidebar,
+ul.indicator,
+ul.items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+  .grid-container-for-body-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    margin: 0 auto;
+    max-width: 50%;
+    padding: 0 0.625em;
+  }
+
+   /* KEYFRAMES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .hidden {
+    opacity: 0;
+    transition: all 1s;
+  }
+
+.show {
+opacity: 1;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+     /* BODY
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  h1 {
+    font-family: 'ChunkFive', serif;
+    font-weight: normal;
+    font-size: 3.9375rem;
+    color: #000000;
+    margin-bottom: -1.5em; /*Makes smaller spacing between category text and board-game text */
+  }
+
+  .jump-ahead {
+    margin-bottom: -2em; 
+  }
+
+  h2{
+    font-family: lato-bold;
+    font-size: 2rem;
+    color: #653B2F;
+  }
+
+  
+  figure h2 {
+    margin: 0 0 0.5em 0; /*Controls spacing between title and image*/
+  }
+
+
+  .body{
+    color: black;
+    font-family: lato-regular;
+    font-size: 1.25rem;
+    margin-bottom: 1.5em; 
+    margin-top: 0.5em; 
+    max-width: 65%;
+  }
+
+  .age-players{
+    color: black;
+    font-family: lato-regular;
+    font-size: 1.25rem;
+    margin: 0;         
+  }
+
+  .bold-text {
+    font-weight: bold;
+}
+
+.grid-container-for-body-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 0 0.625em;
+  border: 1px solid red;
+}
+
+ul.items {
+  display: flex;
+  flex-direction: column;
+  gap: 5em; /* This controls spacing between each board game */
+}
+
+figure {
+    display: flex;
+    flex-direction: column; 
+}
+
+img {
+    max-width: 100%;
+    height: auto; 
+    align-items: center;
+}
+
+p {
+    margin-top: 0.625em;
+}
+
+  /* BREAK POINTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media(max-width: 1076px){
+    .hide_on_mobile{
+      display: none;
+    }
+  }
+
+/*This shows the menu icon on mobile*/
+@media(max-width: 1076px){
+    .menu_icon{
+      display: block;
+    }
+  }
+
+/* This moves the menu icon to the top right corner w*/
+  @media(max-width: 1076px) {
+    nav{
+        padding: 0 0.625em;
+    }
+  }
+
+    @media (max-width: 900px) {
+        .grid-container-for-body-text {
+          width: 100%;      
+          padding: 0;      
+          margin: 0 auto;   
+        }
+      }
+
+/*This shows the menu icon on mobile*/
+    @media(max-width: 900px){
+        img{
+            max-width: 100%;
+            height: auto; 
+        }
+      }
+
+@media(max-width: 900px){
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: -2em; /* Makes smaller spacing between category text and board-game text */
+        }
+      }
+
+@media(max-width: 900px){
+        h2{
+            font-size: 1.5rem;
+        }
+      }
+
+@media(max-width: 900px){
+        .body{
+            max-width: 100%;
+            height: auto; 
+            font-size: 1rem;
+        }
+      }
+
+@media(max-width: 900px){
+        .age-players{
+            font-size: 1rem;
+        }
+      }
+
+@media(max-width: 900px){
+      .jump-ahead {
+        font-size: 1rem;
+      }
+    }
+
+    @media(max-width: 900px){
+      .jump-ahead h3{
+        font-size: 1rem;
+      }
+    }
+
+    @media(max-width: 900px){
+      .filter-by-age {
+        font-size: 1rem;
+        font-family: lato-bold;
+        color: #653B2F;
+      }
+    }
+
+    @media(max-width: 900px){
+      .filter-by-players {
+        font-size: 1rem;
+        font-family: lato-bold;
+        color: #653B2F;
+      }
+    }
+
+    @media(max-width: 900px) {
+    .container-for-filter-conditions {
+      font-size: 1rem;
+    }
+  }
+
+
+@media(max-width: 900px) {
+  .select-age {
+    font-size: 1rem;
+  }
+}
+
+/*@media(max-width: 900px){
+  .container-for-filter-and-sort {
+    margin: 1.5em auto -1.5em; 
+    padding: 0 3em 0 3em; 
+}
+}*/
+
+

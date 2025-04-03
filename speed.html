@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed</title>
+    <link rel="stylesheet" href="style/style-for-speed.css" />
+  </head>
+  <body>
+<!-- NAV BAR -->
+<!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()> <a href="#"><svg class="x_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+          <li class="nav-home"><a href="index.html">Home</a></li>
+          <li class="nav-speed"><a href="speed.html">Speed</a></li>
+          <li class="nav-memory"><a href="memory.html">Memory</a></li>
+          <li class="nav-strategy"><a href="strategy.html">Strategy</a></li>
+          <li class="nav-creativity"><a href="creativity.html">Creativity</a></li>
+          <li class="nav-spelling"><a href="spelling.html">Spelling</a></li>
+          <li class="nav-precision"><a href="precision.html">Precision</a></li>
+        </ul>
+        <ul>
+          <li class="nav-home hide_on_mobile"><a href="index.html">Home</a></li>
+          <li class="nav-speed hide_on_mobile"><a href="speed.html">Speed</a></li>
+          <li class="nav-memory hide_on_mobile"><a href="memory.html">Memory</a></li>
+          <li class="nav-strategy hide_on_mobile"><a href="strategy.html">Strategy</a></li>
+          <li class="nav-creativity hide_on_mobile"><a href="creativity.html">Creativity</a></li>
+          <li class="nav-spelling hide_on_mobile"><a href="spelling.html">Spelling</a></li>
+          <li class="nav-precision hide_on_mobile"><a href="precision.html">Precision</a></li>
+          <li onclick=showSidebar()><a href="#"><svg class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#653B2F"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </nav>
+
+    <!-- HEADER -->
+<!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="grid-container-for-header-section">
+    <figure class="separate-cell-for-category">
+      <h1 class="h1">Speed</h1>  
+    </figure> 
+
+  <ul class="indicator">
+    <li data-filter="all" class="active"><a href="#">All</a></li>
+    <li data-filter="tapple"><a href="#">tapple</a></li>
+    <li data-filter="anomia"><a href="#">anomia</a></li>
+    <li data-filter="brain-fart"><a href="#">brain-fart</a></li>
+  </ul>
+
+  <div class="jump-ahead">
+    <h3>Jump Ahead:</h3>
+    <ul>
+      <li><a href="#tapple">Tapple</a></li>
+      <li><a href="#anomia">Anomia</a></li>
+      <li><a href="#brain-fart">Brain Fart</a></li>
+    </ul>
+  </div>
+
+ <div class="container-for-filter-conditions">
+  <div class="filter-condition-for-age">
+    <span class="filter-by-age">Filter by Age</span>
+    <select name="" id="select-age">
+      <button><option value="default">Default</option></button>
+      <button><option value="LowToHigh">High to Low</option></button>
+      <button><option value="HighToLow">Low to High</option></button>
+    </select>
+  </div>
+
+  <div class="filter-condition-for-players">
+    <span class="filter-by-players">Filter by Players</span>
+    <select name="button" id="select-players">
+      <option value="default">Default</option>
+      <option value="LowToHigh">High to Low</option>
+      <option value="HighToLow">Low to High</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- BODY -->
+<!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="grid-container-for-body-text">
+  <ul class="items">
+  <li data-category="" data-age="" data-players="">
+    <figure class="board-game-section hidden">
+        <h2 id="tapple">Tapple</h2>
+
+        <img src="images/tapple-pic.png" class="tapple-pic" alt="Tapple board game wheel with cards" />
+
+        <figcaption class="body">
+          Enjoy the fast-paced call-out game of Tapple! Find out who can name a
+          word the fastest in the selected category. This game tests your
+          ability to see who can be the fastest!
+        </figcaption>
+
+        <p class="age-players">
+            <span class="bold-text">Age:</span> 8+ <br>
+            <span class="bold-text">Players:</span> 2-8
+          </p>
+    </figure>
+</li>
+
+  <li data-category="" data-age="" data-players="">
+    <figure class="board-game-section hidden"> 
+        <h2 id="anomia">Anomia</h2>
+
+        <img src="images/anomia-pic.png" alt="Anomia card game box showing category cards and symbols" class="anomia-pic" />
+
+        <figcaption class="body">
+          Quick thinking meets chaos in Anomia! Draw a card, match symbols, and
+          race to name an example from your opponent’s category first. Sounds
+          easy until your brain freezes! With wild cards and chain reactions,
+          every round is unpredictable. Think fast, speak faster can you keep
+          up?
+        </figcaption>
+
+        <p class="age-players">
+            <span class="bold-text">Age:</span> 10+ <br>
+            <span class="bold-text">Players:</span> 3-6
+          </p>
+    </figure>
+</li>
+
+  <li data-category="" data-age="" data-players="">
+    <figure class="board-game-section hidden"> 
+        <h2 id="brain-fart">Brain Fart</h2>
+        <img src="images/brain-fart-pic.png" alt="Brain Fart game box with timer and category cards" class="brain-fart-pic" />
+        <figcaption class="body">
+          Similar to Tapple, this game requires players to find a word starting
+          with a letter, but it only gets harder! You must name a word starting
+          with the letter you got while also adhering to the provided category.
+          Will you be able to find a word before the timer runs out? Find out
+          when playing Brain Fart!
+        </figcaption>
+
+        <p class="age-players">
+            <span class="bold-text">Age:</span> 14+ <br>
+            <span class="bold-text">Players:</span> 3 or more
+          </p>
+    </figure>
+</li>
+</ul>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+</div>
+
+
+
+<!-- This code is sourced from Coding 2GO and Design Code Hub-->
+<script>
+        function showSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'none'
+        }
+
+//This code is sourced from w3 schools
+let mybutton = document.getElementById("myBtn");
+
+  //Scroll down 20px, show the button
+window.onscroll = function () {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none"
+  }
+  }
+  
+  //Click on button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+//Fade in up effect
+/*  function fiu() {
+            document.getElementById("fiuAnimates").classList.add("fadeInUp");
+        }*/
+</script> 
+
+<script type="text/javascript" src="sort.js"></script>
+<script type="text/javascript" src="sort-players.js"></script>
+<script defer src="fade-in-up-effect.js"></script>
+  </body>
+</html>
