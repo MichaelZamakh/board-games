@@ -39,18 +39,13 @@ body{
   right: 2rem;
   z-index: 99;
   font-size: 1.25rem;
-  border: none;
-  outline: none;
-  background-color: #B87561;
   color: rgb(0, 0, 0);
   cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
   font-family: lato-regular;
-}
-
-#myBtn:hover {
-  /*background-color: #555;*/
+  border: 0.125em solid #ce9a81;
+  background-color: #ce9a81;
+  border-radius: 0.5em;
 }
 
   /* NAV BAR
@@ -81,7 +76,6 @@ body{
   
   nav li{
     height: 3.7em;
-    /*padding: 0em 0em;*/
   }
   
   nav a{
@@ -98,37 +92,37 @@ body{
   }
 
   .nav-home a:hover {
-    background-color: #B87561;
+    background-color: #ce9a81;
     color: #000000;
   }
 
   .nav-speed a:hover {
-    background-color: #B6766F;
+    background-color: #deaf8c;
     color: #000000;
   }
   
   .nav-memory a:hover {
-    background-color: #79AD7C;
+    background-color: #aedf9d;
     color: #000000;
   }
   
   .nav-strategy a:hover {
-    background-color: #AE89C7;
+    background-color: #bca4db;
     color: #000000;
   }
   
   .nav-creativity a:hover {
-    background-color: #EEA0AF;
+    background-color: #efadd0;
     color: #000000;
   }
   
   .nav-spelling a:hover {
-    background-color: #68A0D0;
+    background-color: #9dcded;
     color: #000000;
   }
   
   .nav-precision a:hover {
-    background-color: #CF946C;
+    background-color: #f5d09d;
     color: #000000;
   }
 
@@ -139,6 +133,7 @@ body{
 nav ul li:last-child {
     margin-left: auto;
 }  
+
   .sidebar{
     display: none;
     flex-direction: column;
@@ -172,10 +167,51 @@ nav ul li:last-child {
   }
 
 
+  /* Active Link */
+a:is(:link, :active, :visited).active-speed {
+  color: rgb(0, 0, 0);
+  background-color: #deaf8c;
+}
+
+a:is(:link, :active, :visited).active-memory {
+  color: rgb(0, 0, 0);
+  background-color: #aedf9d;
+}
+
+a:is(:link, :active, :visited).active-strategy {
+  color: rgb(0, 0, 0);
+  background-color: #bca4db;
+}
+
+a:is(:link, :active, :visited).active-creativity {
+  color: rgb(0, 0, 0);
+  background-color: #efadd0;
+}
+
+a:is(:link, :active, :visited).active-spelling {
+  color: rgb(0, 0, 0);
+  background-color: #9dcded;
+}
+
+a:is(:link, :active, :visited).active-precision {
+  color: rgb(0, 0, 0);
+  background-color: #f5d09d;
+}
+
+
+  /* This makes an outline on the category link when it is focused on it using the keyboard */
+  nav a:focus {
+    outline: 4px solid #653B2F;
+  }
+
+    /* This makes an outline on the links in the sidebar when it is focused on it using the keyboard */
+  .sidebar a:focus {
+    outline: 4px solid #653B2F;
+  }
+
+
    /* HEADER
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
   .jump-ahead {
     font-family: 'lato-regular';
     color: #653B2F;
@@ -227,7 +263,7 @@ nav ul li:last-child {
     display: none;
   }
 
-  .grid-container-for-header-section{
+  .header{
     display: flex;
     flex-direction: column;
     gap: 5em; /*This changes spacing between the separate sections for each board game*/
@@ -276,12 +312,6 @@ nav ul li:last-child {
   color: #653B2F;  
   margin-right: 1rem;
 }
-
-/*option {
-  font-size: 1.25rem;
-  font-family: 'Lato-regular';
-  color: #000000;
-}*/
 
 select {
   font-size: 1.25rem;
@@ -356,7 +386,6 @@ opacity: 1;
 
      /* BODY
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
   h1 {
     font-family: 'ChunkFive', serif;
     font-weight: normal;
@@ -454,6 +483,12 @@ p {
     }
   }
 
+  @media (max-width: 900px) {
+    #myBtn{
+      font-size: 1rem;
+    }
+  }
+
     @media (max-width: 900px) {
         .grid-container-for-body-text {
           width: 100%;      
@@ -538,11 +573,5 @@ p {
   }
 }
 
-/*@media(max-width: 900px){
-  .container-for-filter-and-sort {
-    margin: 1.5em auto -1.5em; 
-    padding: 0 3em 0 3em; 
-}
-}*/
 
 
