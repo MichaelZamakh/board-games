@@ -59,10 +59,10 @@ p{
     font-family: "lato-regular";
     font-weight: normal;
     text-align: center;
-    color: #653B2F;
+    color: #000000;
 }
 
-.top-bar-container{
+.header{
     display: grid;
     border: 1px solid red;
     /*background-color: dodgerblue;*/
@@ -71,7 +71,7 @@ p{
 }
     
 
-.table-container {
+.main {
     display: grid;
     border: 1px solid red;
     grid-template-columns: repeat(3, 1fr);
@@ -91,6 +91,12 @@ p{
     color: #653B2F;
   }
 
+  /* This makes an outline on the category link when it is focused on it using the keyboard */
+.category a:focus-visible {
+  outline: 4px solid #653B2F;   
+  outline-offset: 4px;         
+}
+
 
 .category:hover {
     font-weight: bold;
@@ -104,6 +110,19 @@ p{
   
   .category:hover .category-icon {
     transform: scale(1.05); /* makes it slightly bigger */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .category:hover .category-icon {
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
+  /*Pressing Disable Animations disables the animation*/
+  .reduce-motion .category:hover .category-icon {
+    transform: none !important;
+    transition: none !important;
   }
 
 a, a:visited, a:hover, a:active {
@@ -131,7 +150,7 @@ a, a:visited, a:hover, a:active {
 
 
 @media (max-width: 1000px){
-    .top-bar-container{
+    .header{
         margin: 0 2.6vw 0 2.6vw;
     }
 }
@@ -169,12 +188,13 @@ a, a:visited, a:hover, a:active {
 }
 
 @media (max-width: 1000px) {
-    .table-container {
+    .main {
         grid-template-columns: repeat(2, 1fr);
         margin: 0 5vw 0 5vw;
         row-gap: 3.2rem;
     }
 }
+
 
 
 
