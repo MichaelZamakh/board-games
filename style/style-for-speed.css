@@ -436,7 +436,7 @@ opacity: 1;
   margin: 0 auto;
   max-width: 50em;
   padding: 0 0.625em;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 ul.items {

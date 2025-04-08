@@ -28,21 +28,6 @@ body{
     scroll-behavior: smooth;
 }
 
-/*.header {
-    font-family: 'Bitter-Thin'
-    font-size: 3.9375rem;
-    text-align: center;
-    color: #653B2F;
-  }*/
-
-
-/*  .header {
-    font-family: 'Bitter';
-    font-size: 3.9375rem;
-    font-weight: 100;
-    font-style: normal;
-}*/
-
 h1 {
     font-family: 'ChunkFive', serif;
     font-weight: normal;
@@ -64,8 +49,7 @@ p{
 
 .header{
     display: grid;
-    border: 1px solid red;
-    /*background-color: dodgerblue;*/
+    /* border: 1px solid red; */
     justify-content: center;
     margin: 0 18.2vw 0 18.2vw;
 }
@@ -73,7 +57,7 @@ p{
 
 .main {
     display: grid;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     text-align: center;
