@@ -1,9 +1,12 @@
 // This code is sourced from Design Code Hub
+//This sorts the board games by number of players
 (function() {
-		
+
+        // This selects the <ul> element that contains all the board games
     let field = document.querySelector('.items');
     let li = Array.from(field.children);
 
+    // This filters the board games by the name given in the h2 tag from the HTML
     function FilterProduct() {
         for(let i of li){
             const name = i.querySelector('h2');
@@ -44,6 +47,7 @@
         }
     }
 
+    // This finds the number of players from each board game 
     function SortProduct() {
         let select = document.getElementById('select-players');
 

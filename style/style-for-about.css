@@ -1,0 +1,358 @@
+@font-face {
+    font-family: 'ChunkFive';
+    src: url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.woff2') format('woff2'),
+         url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.woff') format('woff'),
+         url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'lato-regular';
+    src: url('../fonts/lato-web-font/lato-regular.woff') format('woff2'),
+         url('../fonts/lato-web-font/lato-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'lato-bold';
+    src: url('../fonts/lato-web-font/lato-bold.woff') format('woff');
+  }
+
+
+body{
+    margin: 0em; /*This makes the navbar start right at the edge of the screen */
+    background-color: #F6E5DC;
+  }
+
+  * {
+    scroll-behavior: smooth;
+}
+
+
+
+ /* NAV BAR
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  /*I followed a tutorial from Coding2GO YT channel to make the nav bar"*/
+  nav{
+    position: sticky; /* Keeps navbar at top while scrolling down*/
+    background-color: #F5E9DF;
+    box-shadow: 0.1875em 0.1875em 0.3125em rgba(0, 0, 0, 0.1); 
+    min-height: 3.75em; 
+    display: flex;
+    align-items: center;
+    padding: 0 23em; 
+    margin-bottom: -3.8em; /* Makes smaller spacing between nav bar and Works Cited title text */
+    top: 0;
+    z-index: 1000; /* Ensures navbar is above other information */
+  }
+  
+  nav ul{
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  nav li{
+    height: 3.7em;
+  }
+  
+  /* Styling for Navigation links */
+  nav a{
+    height: 100%;
+    padding: 0 1.25em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #653B2F;
+    font-family: lato-regular;
+    font-weight: normal;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+  }
+
+/* HOVER LINK FOR NAVBAR*/
+/* This gives each link in the navbar its own unique colour */
+  .nav-home a:hover {
+    background-color: #e7bf98;
+    color: #000000;
+    font-family: 'lato-bold'
+  }
+
+  .nav-about a:hover {
+    background-color: #e7bf98;
+    color: #000000;
+    font-family: 'lato-bold'
+  }
+
+  .nav-speed a:hover {
+    background-color: #e7a299;
+    color: #000000;
+    font-family: 'lato-bold'
+  }
+  
+  .nav-memory a:hover {
+    background-color: #aedf9d;
+    color: #000000;
+    font-family: 'lato-bold'
+  }
+  
+  .nav-strategy a:hover {
+    background-color: #bca4db;
+    color: #000000;
+    font-family: 'lato-bold'
+  }
+  
+  .nav-creativity a:hover {
+    background-color: #efadd0;
+    color: #000000;
+    font-family: 'lato-bold'
+  }
+  
+  .nav-spelling a:hover {
+    background-color: #9dcded;
+    color: #000000;
+    font-family: 'lato-bold'
+  }
+  
+  .nav-precision a:hover {
+    background-color: #f5d09d;
+    color: #000000;
+    font-family: 'lato-bold'
+  }
+
+  nav li:first-child{
+    margin-right: 0;
+  }
+
+nav ul li:last-child {
+    margin-left: auto; /* Pushes the hamburger menu icon to the far right */
+}  
+
+/* This gives the navbar a fade in transition as you hover over it */
+a:hover {
+  transition: 1s;
+}
+
+  .sidebar{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 15.625em;
+    z-index: 999;
+    background-color: #F5E9DF;
+    box-shadow: -0.625em 0 0.625em rgba(0, 0, 0, 0.1);
+    align-items: flex-start;
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+  
+  .sidebar li{
+    width: 100%;
+  }
+  
+  .sidebar a{
+    width: 100%;
+  }
+  
+  .x_icon{
+    fill: #653B2F;
+  }
+  
+  .menu_icon {
+    display: none;
+  }
+
+  /* ACTIVE LINK FOR NAVBAR*/
+  /* This ensures the current page has a background on the selected page in the nav bar*/
+  a:is(:link, :active, :visited).active-about {
+    color: rgb(0, 0, 0);
+    background-color: #e7bf98;
+    font-family: 'lato-bold';
+  }
+
+  a:is(:link, :active, :visited).active-speed {
+  color: rgb(0, 0, 0);
+  background-color: #e7a299;
+  font-family: 'lato-bold' /* The page you are on is in bold */
+}
+
+a:is(:link, :active, :visited).active-memory {
+  color: rgb(0, 0, 0);
+  background-color: #aedf9d;
+  font-family: 'lato-bold'
+}
+
+a:is(:link, :active, :visited).active-strategy {
+  color: rgb(0, 0, 0);
+  background-color: #bca4db;
+  font-family: 'lato-bold'
+}
+
+a:is(:link, :active, :visited).active-creativity {
+  color: rgb(0, 0, 0);
+  background-color: #efadd0;
+  font-family: 'lato-bold'
+}
+
+a:is(:link, :active, :visited).active-spelling {
+  color: rgb(0, 0, 0);
+  background-color: #9dcded;
+  font-family: 'lato-bold'
+}
+
+a:is(:link, :active, :visited).active-precision {
+  color: rgb(0, 0, 0);
+  background-color: #f5d09d;
+  font-family: 'lato-bold'
+}
+
+  /* This makes an outline on the category link when it is focused on it using the keyboard */
+  nav a:focus {
+    outline: 4px solid #653B2F;
+  }
+
+    /* This makes an outline on the links in the sidebar when it is focused on it using the keyboard */
+  .sidebar a:focus {
+    outline: 4px solid #653B2F;
+  }
+
+   /* BODY
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+p {
+    font-family: 'lato-regular';
+    line-height: 1.5;  
+    font-size: 1.25rem;
+}
+
+.bold-text{
+  font-family: 'lato-bold'
+}
+
+.works-cited {
+  text-indent: -1.5rem;   /* Pull first line to the left */
+  padding-left: 1.5rem;   /* Push rest of lines to the right */
+}
+
+h1 {
+    font-family: 'ChunkFive';
+    font-size: 3.9375rem;
+    margin-bottom: -0.09em; /* Reduces space below the heading */
+    margin-top: 0.7em;
+}
+
+h2 {
+  font-family: 'lato-bold';
+  font-size: 2rem;  
+  color: #653B2F;
+  margin-bottom: -0.09em; /* Reduces space below the heading */
+}
+
+.main {
+    display: flex;
+    flex-direction: column; 
+    width: 40%;
+    padding: 1rem;
+    /* border: 2px solid red; */
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+    /* BACK TO TOP
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    font-size: 1.25rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 0.938rem;
+    font-family: lato-regular;
+    border: 0.125em solid #e7bf98;
+    background-color: #e7bf98;
+    border-radius: 0.5em;
+  }
+
+  #myBtn:hover{
+    transform: scale(1.05); /* makes it slightly bigger */
+    font-family: 'lato-bold';
+  }
+
+  
+     /* BREAKPOINTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* This hides the navbar on mobile */
+  @media(max-width: 1076px){
+    .hide_on_mobile{
+      display: none;
+    }
+  }
+
+/*This shows the hamburger menu icon on mobile*/
+@media(max-width: 1076px){
+    .menu_icon{
+      display: block;
+    }
+  }
+
+/* This moves the menu icon to the top right corner w*/
+  @media(max-width: 1076px) {
+    nav{
+        padding: 0 0.625em;
+    }
+  }
+
+
+
+/* mobile */
+@media (max-width: 1000px) {
+    .main {
+        width: 100%;
+        overflow-wrap: break-word;  /* this wraps the URLs */
+    }
+}
+
+@media (max-width: 1300px) {
+  .main {
+    width: 70%;
+  }
+}
+
+
+/* mobile */
+@media (max-width: 1000px) {
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* mobile */
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 1000px){
+  h2{
+      font-size: 1.5rem;
+  }
+}
+
+  /* This makes the "Go To Top" button have smaller font size on mobile*/
+  @media (max-width: 1000px) {
+    #myBtn{
+      font-size: 1rem;
+    }
+  }
