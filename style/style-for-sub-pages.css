@@ -21,7 +21,7 @@
 }
 
 body{
-    margin: 0px;
+    margin: 0em; /*This makes the navbar start right at the edge of the screen */
     background-color: #F6E5DC;
   }
 
@@ -41,11 +41,16 @@ body{
   font-size: 1.25rem;
   color: rgb(0, 0, 0);
   cursor: pointer;
-  padding: 15px;
+  padding: 0.938rem;
   font-family: lato-regular;
-  border: 0.125em solid #ce9a81;
-  background-color: #ce9a81;
+  border: 0.125em solid #e7bf98;
+  background-color: #e7bf98;
   border-radius: 0.5em;
+}
+
+#myBtn:hover {
+  transform: scale(1.05); /* makes it slightly bigger */
+  font-family: 'lato-bold';
 }
 
   /* NAV BAR
@@ -59,7 +64,7 @@ body{
     display: flex;
     align-items: center;
     padding: 0 23em; 
-    margin-bottom: -1.5em; /* Makes smaller spacing between nav bar and category text */
+    margin-bottom: -1.5em; /* Reduces space below the navbar */
     top: 0;
     z-index: 1000;
   }
@@ -91,39 +96,55 @@ body{
     text-transform: uppercase;
   }
 
+
+/* HOVER LINK FOR NAVBAR*/
+/* This gives each link in the navbar its own unique colour */
   .nav-home a:hover {
-    background-color: #ce9a81;
+    background-color: #e7bf98;
     color: #000000;
+    font-family: 'lato-bold'
+  }
+
+  .nav-about a:hover {
+    background-color: #e7bf98;
+    color: #000000;
+    font-family: 'lato-bold'
   }
 
   .nav-speed a:hover {
-    background-color: #deaf8c;
+    background-color: #e7a299;
     color: #000000;
+    font-family: 'lato-bold'
   }
   
   .nav-memory a:hover {
     background-color: #aedf9d;
     color: #000000;
+    font-family: 'lato-bold'
   }
   
   .nav-strategy a:hover {
     background-color: #bca4db;
     color: #000000;
+    font-family: 'lato-bold'
   }
   
   .nav-creativity a:hover {
     background-color: #efadd0;
     color: #000000;
+    font-family: 'lato-bold'
   }
   
   .nav-spelling a:hover {
     background-color: #9dcded;
     color: #000000;
+    font-family: 'lato-bold'
   }
   
   .nav-precision a:hover {
     background-color: #f5d09d;
     color: #000000;
+    font-family: 'lato-bold'
   }
 
   nav li:first-child{
@@ -131,8 +152,13 @@ body{
   }
 
 nav ul li:last-child {
-    margin-left: auto;
+    margin-left: auto; /* Pushes the hamburger menu icon to the far right */
 }  
+
+/* This gives the navbar a fade in transition as you hover over it */
+a:hover {
+  transition: 1s;
+}
 
   .sidebar{
     display: none;
@@ -167,35 +193,48 @@ nav ul li:last-child {
   }
 
 
-  /* Active Link */
-a:is(:link, :active, :visited).active-speed {
+/* ACTIVE LINK FOR NAVBAR*/
+  /* This ensures the current page has a background on the selected page in the nav bar*/
+  a:is(:link, :active, :visited).active-about {
+    color: rgb(0, 0, 0);
+    background-color: #e7bf98;
+    font-family: 'lato-bold' /* The page you are on is in bold */
+  }
+
+  a:is(:link, :active, :visited).active-speed {
   color: rgb(0, 0, 0);
-  background-color: #deaf8c;
+  background-color: #e7a299;
+  font-family: 'lato-bold' /* The page you are on is in bold */
 }
 
 a:is(:link, :active, :visited).active-memory {
   color: rgb(0, 0, 0);
   background-color: #aedf9d;
+  font-family: 'lato-bold'
 }
 
 a:is(:link, :active, :visited).active-strategy {
   color: rgb(0, 0, 0);
   background-color: #bca4db;
+  font-family: 'lato-bold'
 }
 
 a:is(:link, :active, :visited).active-creativity {
   color: rgb(0, 0, 0);
   background-color: #efadd0;
+  font-family: 'lato-bold'
 }
 
 a:is(:link, :active, :visited).active-spelling {
   color: rgb(0, 0, 0);
   background-color: #9dcded;
+  font-family: 'lato-bold'
 }
 
 a:is(:link, :active, :visited).active-precision {
   color: rgb(0, 0, 0);
   background-color: #f5d09d;
+  font-family: 'lato-bold'
 }
 
 
@@ -225,37 +264,33 @@ a:is(:link, :active, :visited).active-precision {
 
   
   .jump-ahead h3 {
-    margin-bottom: 0.25em;
+    margin-bottom: 0.25em; /* Makes smaller spacing between jump ahead text and the links */
     font-size: 1.25rem;
     font-family: lato-bold;
   }
   
   .jump-ahead ul {
     list-style: circle;
-    padding-left: 0;
+    padding-left: 0.7em; /*This makes the bullet points perfectly align with the rest of the content */
     margin: 0;
   }
   
   .jump-ahead li {
-    margin-bottom: 0.25em;
+    margin-bottom: 0.25em; /* Makes larger spacing between the links */
     text-indent: 2em;
   }
   
   .jump-ahead a {
     text-decoration: none;
-    color: #1E6EDB;
+    color: #1E6EDB; 
 
   }
-  
+/* This gives the links an underline when you hover over them */
   .jump-ahead a:hover {
     text-decoration: underline;
     transition: 1s;
-    color:#155AC0;
+    color:#155AC0; /* Gives the links a darker shade of blue as you hover over it */
     font-family: lato-bold;
-  }
-
-  a:hover {
-    transition: 1s;
   }
 
   
@@ -277,7 +312,7 @@ a:is(:link, :active, :visited).active-precision {
 .container-for-filter-conditions{
   position: relative;
   /*border: 1px solid red;*/
-  margin-bottom: 5em;
+  margin-bottom: 5em; /*This creates more spacing between the filter conditions and the main sections*/
 }
 
   .filter-condition-for-age {
@@ -285,24 +320,24 @@ a:is(:link, :active, :visited).active-precision {
     flex-direction: column;
     /*border: 1px solid red;*/
     max-width: 50%;
-    padding: 0 2em;
+    padding: 0 2.4em; /*This aligns the filter by age text with the text above it*/
     position: absolute;
     
   }
 
   .filter-condition-for-players {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* This sets it to vertical, stacking the information from top to bottom */
     /*border: 1px solid red;*/
     max-width: 50%;
     padding: 0 0.625em;
     margin-left: 3em;
     position: absolute;
-    margin-left: 12em;
+    margin-left: 17em;
   }
 
 .product-field ul {
-  list-style: none;
+  list-style: none; /* This removes the bullet points*/
 }
 
 .filter-by-age,
@@ -313,19 +348,16 @@ a:is(:link, :active, :visited).active-precision {
   margin-right: 1rem;
 }
 
+/* This styles the selection drop down menu */
 select {
   font-size: 1.25rem;
   font-family: 'Lato';
   color: #000;
   background-color: #fff;
   padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  border: 0.063rem solid #ccc;
 }
-  
-
-   /* BODY
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 ul.sidebar,
 ul.indicator,
@@ -335,35 +367,35 @@ ul.items {
   margin: 0;
 }
 
-  .grid-container-for-body-text {
+  .main {
     display: flex;
     flex-direction: column;
     gap: 5em;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 50%; /* This controls the main porition of my code to only take up 50% of screen width */
     padding: 0 0.625em;
   }
 
-   /* KEYFRAMES
+   /* FADE IN UP EFFECT 
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .hidden {
+.hidden {
     opacity: 0;
     transition: all 1s;
   }
 
 .show {
-opacity: 1;
+    opacity: 1; /*At one second the board games reach 100% opacity*/
 }
 
 @-webkit-keyframes fadeInUp {
   0% {
       opacity: 0;
-      transform: translateY(100px);
+      transform: translateY(100px); 
   }
 
   100% {
       opacity: 1;
-      transform: translateY(0px);
+      transform: translateY(0px); 
   }
 }
 
@@ -426,11 +458,12 @@ opacity: 1;
     margin: 0;         
   }
 
-  .bold-text {
+/*The text reading: "age" and "players" is bolded here*/
+.bold-text {
     font-weight: bold;
 }
 
-.grid-container-for-body-text {
+.main {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -446,7 +479,7 @@ ul.items {
 }
 
 figure {
-    display: flex;
+    display: flex; /* This makes the images and text respond flexibly*/
     flex-direction: column; 
 }
 
@@ -462,7 +495,7 @@ p {
 
   /* BREAK POINTS
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+/* This hides the navbar on mobile */
 @media(max-width: 1076px){
     .hide_on_mobile{
       display: none;
@@ -483,13 +516,14 @@ p {
     }
   }
 
+  /* This makes the "Go To Top" button have smaller font size on mobile*/
   @media (max-width: 900px) {
     #myBtn{
       font-size: 1rem;
     }
   }
 
-    @media (max-width: 900px) {
+@media (max-width: 900px) {
         .grid-container-for-body-text {
           width: 100%;      
           padding: 0;      
@@ -497,7 +531,7 @@ p {
         }
       }
 
-/*This shows the menu icon on mobile*/
+/*The images take up the whole container width on mobile*/
     @media(max-width: 900px){
         img{
             max-width: 100%;
@@ -560,18 +594,29 @@ p {
       }
     }
 
-    @media(max-width: 900px) {
-    .container-for-filter-conditions {
-      font-size: 1rem;
-    }
-  }
-
-
-@media(max-width: 900px) {
-  .select-age {
+/* This makes the dropdown menu text smaller at mobile */
+@media (max-width: 900px) {
+  select {
     font-size: 1rem;
   }
 }
+
+
+/* This makes the spacing between the filter by age and players consistent with how it was in desktop*/
+@media (max-width: 900px) {
+  .filter-condition-for-players {
+    margin-left: 14.2em;
+  }
+}
+
+/* This makes the bullet points perfectly aligned with the rest of the content on mobile*/
+@media (max-width: 900px) {
+  .jump-ahead ul {
+    padding-left: 1em;
+  }
+}
+
+
 
 
 

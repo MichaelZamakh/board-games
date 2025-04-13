@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Spelling</title>
-    <link rel="stylesheet" href="style/style-for-speed.css" />
+    <link rel="stylesheet" href="style/style-for-sub-pages.css" >
   </head>
   <body>
 <!-- NAV BAR -->
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <nav>
-        <ul class="sidebar">
-          <li onclick=hideSidebar()> <a href="#"><svg class="x_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-          <li class="nav-home"><a class="home" href="index.html">Home</a></li>
-          <li class="nav-speed"><a class="speed" href="speed.html">Speed</a></li>
-          <li class="nav-memory"><a class="memory" href="memory.html">Memory</a></li>
-          <li class="nav-strategy"><a class="strategy" href="strategy.html">Strategy</a></li>
-          <li class="nav-creativity"><a class="creativity" href="creativity.html">Creativity</a></li>
-          <li class="nav-spelling"><a class="spelling" href="spelling.html">Spelling</a></li>
-          <li class="nav-precision"><a class="precision" href="precision.html">Precision</a></li>
-          <span class="undr-line"></span>
-        </ul>
-        <ul>
-          <li class="nav-home hide_on_mobile"><a href="index.html">Home</a></li>
-          <li class="nav-speed hide_on_mobile"><a href="speed.html">Speed</a></li>
-          <li class="nav-memory hide_on_mobile"><a href="memory.html">Memory</a></li>
-          <li class="nav-strategy hide_on_mobile"><a href="strategy.html">Strategy</a></li>
-          <li class="nav-creativity hide_on_mobile"><a href="creativity.html">Creativity</a></li>
-          <li class="nav-spelling hide_on_mobile"><a href="spelling.html">Spelling</a></li>
-          <li class="nav-precision hide_on_mobile"><a href="precision.html">Precision</a></li>
-          <li onclick=showSidebar()><a href="#"><svg class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#653B2F"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-    </nav>
+<nav>
+  <ul class="sidebar">
+    <li onclick=hideSidebar()> <a href="#"><svg class="x_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+    <li class="nav-home"><a class="home" href="index.html">Home</a></li>
+    <li class="nav-about"><a class="about" href="about.html">About</a></li>
+    <li class="nav-speed"><a class="speed" href="speed.html">Speed</a></li>
+    <li class="nav-memory"><a class="memory" href="memory.html">Memory</a></li>
+    <li class="nav-strategy"><a class="strategy" href="strategy.html">Strategy</a></li>
+    <li class="nav-creativity"><a class="creativity" href="creativity.html">Creativity</a></li>
+    <li class="nav-spelling"><a class="spelling" href="spelling.html">Spelling</a></li>
+    <li class="nav-precision"><a class="precision" href="precision.html">Precision</a></li>
+    <span class="undr-line"></span>
+  </ul>
+  <ul>
+    <li class="nav-home hide_on_mobile"><a href="index.html">Home</a></li>
+    <li class="nav-about hide_on_mobile"><a href="about.html">About</a></li>
+    <li class="nav-speed hide_on_mobile"><a href="speed.html">Speed</a></li>
+    <li class="nav-memory hide_on_mobile"><a href="memory.html">Memory</a></li>
+    <li class="nav-strategy hide_on_mobile"><a href="strategy.html">Strategy</a></li>
+    <li class="nav-creativity hide_on_mobile"><a href="creativity.html">Creativity</a></li>
+    <li class="nav-spelling hide_on_mobile"><a href="spelling.html">Spelling</a></li>
+    <li class="nav-precision hide_on_mobile"><a href="precision.html">Precision</a></li>
+    <li onclick=showSidebar()><a href="#"><svg class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#653B2F"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+</nav>
 
     <!-- HEADER -->
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="header">
-    <figure class="separate-cell-for-category">
+    <figure class="container-for-category">
       <h1 class="h1">Spelling</h1>  
     </figure> 
+
 
   <ul class="indicator">
     <li data-filter="all" class="active"><a href="#">All</a></li>
@@ -45,6 +48,7 @@
     <li data-filter="scrabble"><a href="#">scrabble</a></li>
   </ul>
 
+<!-- This is what displays the links -->
   <div class="jump-ahead">
     <h3>Jump Ahead:</h3>
     <ul>
@@ -53,20 +57,22 @@
     </ul>
   </div>
 
+<!-- This is the dropdown menu for the filter and sort for age-->
  <div class="container-for-filter-conditions">
   <div class="filter-condition-for-age">
     <span class="filter-by-age">Filter by Age</span>
     <select name="" id="select-age">
-      <button><option value="default">Default</option></button>
-      <button><option value="LowToHigh">High to Low</option></button>
-      <button><option value="HighToLow">Low to High</option></button>
+      <button><option value="Default">Default</option></button>
+      <button><option value="YoungestToOldest">Oldest to Youngest</option></button>
+      <button><option value="OldestToYoungest">Youngest to Oldest</option></button>
     </select>
   </div>
 
+<!-- This is the dropdown menu for the filter and sort for number of players-->
   <div class="filter-condition-for-players">
     <span class="filter-by-players">Filter by Players</span>
     <select name="button" id="select-players">
-      <option value="default">Default</option>
+      <option value="Default">Default</option>
       <option value="LowToHigh">High to Low</option>
       <option value="HighToLow">Low to High</option>
     </select>
@@ -74,18 +80,19 @@
 </div>
 </div>
 
-<!-- BODY -->
+<!-- MAIN -->
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="grid-container-for-body-text">
+  <div class="main">
   <ul class="items">
+    <!-- Board game 1-->
   <li data-category="" data-age="" data-players="">
     <figure class="board-game-section hidden">
         <h2 id="hang-man">Hang Man</h2>
 
-        <img src="images/hangman-pic.png" class="hangman-pic" alt="Stick figure, letters and white baord filling in missing letters" />
+        <img src="images/hangman-pic.png" alt="Stick figure, letters and white board filling in missing letters" />
 
         <figcaption class="body">
-            Hangman is great for younger players as it has simple rules: guess the letters of the word before the drawing of the stick figure is complete. To get the word right, your spelling must be correct, so make sure to pay attention!
+          Hang Man is great for younger players as it has simple rules: guess the letters of the word before the drawing of the stick figure is complete. To get the word right, your spelling must be correct, so make sure to pay attention!
         </figcaption>
 
         <p class="age-players">
@@ -95,14 +102,15 @@
     </figure>
 </li>
 
+    <!-- Board game 2-->
   <li data-category="" data-age="" data-players="">
     <figure class="board-game-section hidden"> 
         <h2 id="scrabble">Scrabble</h2>
 
-        <img src="images/scrabble-pic.png" alt="Scrabble board game with letters being placed to form words" class="scrabble-pic" />
+        <img src="images/scrabble-pic.png" alt="Scrabble board game with letters being placed to form words" >
 
         <figcaption class="body">
-            Scrabble isn’ t an easy game! It requires deep thinking and an understanding of spelling, as well as the ability to be resourceful with the letters you have. Test your vocabulary and word-forming skills in Scrabble!
+          Scrabble isn’t an easy game! It requires deep thinking and an understanding of spelling, as well as the ability to be resourceful with the letters you have. Test your vocabulary and word-forming skills in Scrabble!
         </figcaption>
 
         <p class="age-players">
@@ -116,9 +124,10 @@
 </div>
 
 
-
-<!-- This code is sourced from Coding 2GO and Design Code Hub-->
 <script>
+
+  //Navigation Bar on Mobile
+  //This code is sourced from Coding 2GO and Design Code Hub
         function showSidebar(){
           const sidebar = document.querySelector('.sidebar')
           sidebar.style.display = 'flex'
@@ -131,7 +140,7 @@
 //This code is sourced from w3 schools
 let mybutton = document.getElementById("myBtn");
 
-  //Scroll down 20px, show the button
+  //Scroll down 20px, it will show the button reading Back to top
 window.onscroll = function () {scrollFunction()};
 
 function scrollFunction() {
@@ -151,10 +160,10 @@ function scrollFunction() {
 
 </script> 
 
-<script type="text/javascript" src="sort.js"></script>
+<!-- These are links to external javascript files -->
+<script type="text/javascript" src="sort-age.js"></script>
 <script type="text/javascript" src="sort-players.js"></script>
 <script defer src="fade-in-up-effect.js"></script>
 <script  src="function-for-active-link.js"></script>
   </body>
 </html>
-

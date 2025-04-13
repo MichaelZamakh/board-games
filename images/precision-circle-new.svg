@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_4" data-name="Layer 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116 116">
+  <circle cx="58" cy="58" r="53.24" fill="#f5d09d"/>
+  <g id="Layer_3" data-name="Layer 3">
+    <g>
+      <circle cx="58.34" cy="58.1" r="31.62" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2.5"/>
+      <circle cx="58.51" cy="58.27" r="19.22" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2.5"/>
+      <circle cx="58.27" cy="58.75" r="9.63" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2.5"/>
+      <line x1="84.57" y1="32.61" x2="58.27" y2="58.75" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.5"/>
+      <path d="M85.15,32.24l-3.37-6.54,3.45-3.24c1.07,2.08,2.15,4.16,3.22,6.24" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+      <path d="M84.99,31.92l6.75,3.48,3.33-3.53c-2.16-1.03-4.32-2.06-6.48-3.09" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    </g>
+  </g>
+</svg>

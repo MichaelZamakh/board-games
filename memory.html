@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Memory</title>
-    <link rel="stylesheet" href="style/style-for-speed.css" />
+    <link rel="stylesheet" href="style/style-for-sub-pages.css" >
   </head>
   <body>
 <!-- NAV BAR -->
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <nav>
-        <ul class="sidebar">
-          <li onclick=hideSidebar()> <a href="#"><svg class="x_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-          <li class="nav-home"><a class="home" href="index.html">Home</a></li>
-          <li class="nav-speed"><a class="speed" href="speed.html">Speed</a></li>
-          <li class="nav-memory"><a class="memory" href="memory.html">Memory</a></li>
-          <li class="nav-strategy"><a class="strategy" href="strategy.html">Strategy</a></li>
-          <li class="nav-creativity"><a class="creativity" href="creativity.html">Creativity</a></li>
-          <li class="nav-spelling"><a class="spelling" href="spelling.html">Spelling</a></li>
-          <li class="nav-precision"><a class="precision" href="precision.html">Precision</a></li>
-          <span class="undr-line"></span>
-        </ul>
-        <ul>
-          <li class="nav-home hide_on_mobile"><a href="index.html">Home</a></li>
-          <li class="nav-speed hide_on_mobile"><a href="speed.html">Speed</a></li>
-          <li class="nav-memory hide_on_mobile"><a href="memory.html">Memory</a></li>
-          <li class="nav-strategy hide_on_mobile"><a href="strategy.html">Strategy</a></li>
-          <li class="nav-creativity hide_on_mobile"><a href="creativity.html">Creativity</a></li>
-          <li class="nav-spelling hide_on_mobile"><a href="spelling.html">Spelling</a></li>
-          <li class="nav-precision hide_on_mobile"><a href="precision.html">Precision</a></li>
-          <li onclick=showSidebar()><a href="#"><svg class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#653B2F"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-    </nav>
+<nav>
+  <ul class="sidebar">
+    <li onclick=hideSidebar()> <a href="#"><svg class="x_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+    <li class="nav-home"><a class="home" href="index.html">Home</a></li>
+    <li class="nav-about"><a class="about" href="about.html">About</a></li>
+    <li class="nav-speed"><a class="speed" href="speed.html">Speed</a></li>
+    <li class="nav-memory"><a class="memory" href="memory.html">Memory</a></li>
+    <li class="nav-strategy"><a class="strategy" href="strategy.html">Strategy</a></li>
+    <li class="nav-creativity"><a class="creativity" href="creativity.html">Creativity</a></li>
+    <li class="nav-spelling"><a class="spelling" href="spelling.html">Spelling</a></li>
+    <li class="nav-precision"><a class="precision" href="precision.html">Precision</a></li>
+    <span class="undr-line"></span>
+  </ul>
+  <ul>
+    <li class="nav-home hide_on_mobile"><a href="index.html">Home</a></li>
+    <li class="nav-about hide_on_mobile"><a href="about.html">About</a></li>
+    <li class="nav-speed hide_on_mobile"><a href="speed.html">Speed</a></li>
+    <li class="nav-memory hide_on_mobile"><a href="memory.html">Memory</a></li>
+    <li class="nav-strategy hide_on_mobile"><a href="strategy.html">Strategy</a></li>
+    <li class="nav-creativity hide_on_mobile"><a href="creativity.html">Creativity</a></li>
+    <li class="nav-spelling hide_on_mobile"><a href="spelling.html">Spelling</a></li>
+    <li class="nav-precision hide_on_mobile"><a href="precision.html">Precision</a></li>
+    <li onclick=showSidebar()><a href="#"><svg class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#653B2F"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+</nav>
 
     <!-- HEADER -->
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="header">
-    <figure class="separate-cell-for-category">
+    <figure class="container-for-category">
       <h1 class="h1">Memory</h1>  
     </figure> 
+
 
   <ul class="indicator">
     <li data-filter="all" class="active"><a href="#">All</a></li>
@@ -46,6 +49,7 @@
     <li data-filter="cortex"><a href="#">cortex</a></li>
   </ul>
 
+<!-- This is what displays the links -->
   <div class="jump-ahead">
     <h3>Jump Ahead:</h3>
     <ul>
@@ -55,20 +59,22 @@
     </ul>
   </div>
 
+<!-- This is the dropdown menu for the filter and sort for age-->
  <div class="container-for-filter-conditions">
   <div class="filter-condition-for-age">
     <span class="filter-by-age">Filter by Age</span>
     <select name="" id="select-age">
-      <button><option value="default">Default</option></button>
-      <button><option value="LowToHigh">High to Low</option></button>
-      <button><option value="HighToLow">Low to High</option></button>
+      <button><option value="Default">Default</option></button>
+      <button><option value="YoungestToOldest">Oldest to Youngest</option></button>
+      <button><option value="OldestToYoungest">Youngest to Oldest</option></button>
     </select>
   </div>
 
+<!-- This is the dropdown menu for the filter and sort for number of players-->
   <div class="filter-condition-for-players">
     <span class="filter-by-players">Filter by Players</span>
     <select name="button" id="select-players">
-      <option value="default">Default</option>
+      <option value="Default">Default</option>
       <option value="LowToHigh">High to Low</option>
       <option value="HighToLow">Low to High</option>
     </select>
@@ -76,15 +82,16 @@
 </div>
 </div>
 
-<!-- BODY -->
+<!-- MAIN -->
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="grid-container-for-body-text">
+  <div class="main">
   <ul class="items">
+    <!-- Board game 1-->
   <li data-category="" data-age="" data-players="">
     <figure class="board-game-section hidden">
         <h2 id="memory-match">Memory Match</h2>
 
-        <img src="images/memory-match-pic.png" class="memory-match-pic" alt="Memory match board game wheel with cards" />
+        <img src="images/memory-match-pic.png" alt="Memory match board game wheel with cards" />
 
         <figcaption class="body">
           Test your memory and collect the most cards! This game challenges you to remember where each image is placed through visual memorization. Compete with up to four players and find out who has the sharpest memory!
@@ -97,11 +104,12 @@
     </figure>
 </li>
 
+    <!-- Board game 2-->
   <li data-category="" data-age="" data-players="">
     <figure class="board-game-section hidden"> 
         <h2 id="simon">Simon</h2>
 
-        <img src="images/simon-pic.png" alt="Simon box showing colourful wheel" class="simon-pic" />
+        <img src="images/simon-pic.png" alt="Simon box showing colourful wheel" >
 
         <figcaption class="body">
           Simon challenges your memory like never before! Watch the lights flash in a sequence and repeat them back correctly to stay in the game. Each round gets harder as the pattern grows longer, pushing your brain to keep up! Stay focused and recall every step—one mistake, and it's game over! This fast-paced game will put your memory to the ultimate test!
@@ -114,10 +122,11 @@
     </figure>
 </li>
 
+    <!-- Board game 3-->
   <li data-category="" data-age="" data-players="">
     <figure class="board-game-section hidden"> 
         <h2 id="cortex">Cortex</h2>
-        <img src="images/cortex-pic.png" alt="Cortex game box with brain drawing" class="cortex-pic" />
+        <img src="images/cortex-pic.png" alt="Cortex game box with brain drawing" >
         <figcaption class="body">
           Cortex is a fast-thinking memory challenge! Compete in brain-boosting mini-games that test your recall and logic. Watch closely, memorize patterns, and react fast—only the sharpest minds will win! With puzzles that keep you on your toes, Cortex is the perfect game to train your memory while having fun!
         </figcaption>
@@ -133,9 +142,10 @@
 </div>
 
 
-
-<!-- This code is sourced from Coding 2GO and Design Code Hub-->
 <script>
+
+  //Navigation Bar on Mobile
+  //This code is sourced from Coding 2GO and Design Code Hub
         function showSidebar(){
           const sidebar = document.querySelector('.sidebar')
           sidebar.style.display = 'flex'
@@ -148,7 +158,7 @@
 //This code is sourced from w3 schools
 let mybutton = document.getElementById("myBtn");
 
-  //Scroll down 20px, show the button
+  //Scroll down 20px, it will show the button reading Back to top
 window.onscroll = function () {scrollFunction()};
 
 function scrollFunction() {
@@ -168,7 +178,8 @@ function scrollFunction() {
 
 </script> 
 
-<script type="text/javascript" src="sort.js"></script>
+<!-- These are links to external javascript files -->
+<script type="text/javascript" src="sort-age.js"></script>
 <script type="text/javascript" src="sort-players.js"></script>
 <script defer src="fade-in-up-effect.js"></script>
 <script  src="function-for-active-link.js"></script>

@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Strategy</title>
-    <link rel="stylesheet" href="style/style-for-speed.css" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Speed</title>
+    <link rel="stylesheet" href="style/style-for-sub-pages.css" >
   </head>
   <body>
 <!-- NAV BAR -->
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <nav>
-        <ul class="sidebar">
-          <li onclick=hideSidebar()> <a href="#"><svg class="x_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-          <li class="nav-home"><a class="home" href="index.html">Home</a></li>
-          <li class="nav-speed"><a class="speed" href="speed.html">Speed</a></li>
-          <li class="nav-memory"><a class="memory" href="memory.html">Memory</a></li>
-          <li class="nav-strategy"><a class="strategy" href="strategy.html">Strategy</a></li>
-          <li class="nav-creativity"><a class="creativity" href="creativity.html">Creativity</a></li>
-          <li class="nav-spelling"><a class="spelling" href="spelling.html">Spelling</a></li>
-          <li class="nav-precision"><a class="precision" href="precision.html">Precision</a></li>
-          <span class="undr-line"></span>
-        </ul>
-        <ul>
-          <li class="nav-home hide_on_mobile"><a href="index.html">Home</a></li>
-          <li class="nav-speed hide_on_mobile"><a href="speed.html">Speed</a></li>
-          <li class="nav-memory hide_on_mobile"><a href="memory.html">Memory</a></li>
-          <li class="nav-strategy hide_on_mobile"><a href="strategy.html">Strategy</a></li>
-          <li class="nav-creativity hide_on_mobile"><a href="creativity.html">Creativity</a></li>
-          <li class="nav-spelling hide_on_mobile"><a href="spelling.html">Spelling</a></li>
-          <li class="nav-precision hide_on_mobile"><a href="precision.html">Precision</a></li>
-          <li onclick=showSidebar()><a href="#"><svg class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#653B2F"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-    </nav>
+<nav>
+  <ul class="sidebar">
+    <li onclick=hideSidebar()> <a href="#"><svg class="x_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+    <li class="nav-home"><a class="home" href="index.html">Home</a></li>
+    <li class="nav-about"><a class="about" href="about.html">About</a></li>
+    <li class="nav-speed"><a class="speed" href="speed.html">Speed</a></li>
+    <li class="nav-memory"><a class="memory" href="memory.html">Memory</a></li>
+    <li class="nav-strategy"><a class="strategy" href="strategy.html">Strategy</a></li>
+    <li class="nav-creativity"><a class="creativity" href="creativity.html">Creativity</a></li>
+    <li class="nav-spelling"><a class="spelling" href="spelling.html">Spelling</a></li>
+    <li class="nav-precision"><a class="precision" href="precision.html">Precision</a></li>
+    <span class="undr-line"></span>
+  </ul>
+  <ul>
+    <li class="nav-home hide_on_mobile"><a href="index.html">Home</a></li>
+    <li class="nav-about hide_on_mobile"><a href="about.html">About</a></li>
+    <li class="nav-speed hide_on_mobile"><a href="speed.html">Speed</a></li>
+    <li class="nav-memory hide_on_mobile"><a href="memory.html">Memory</a></li>
+    <li class="nav-strategy hide_on_mobile"><a href="strategy.html">Strategy</a></li>
+    <li class="nav-creativity hide_on_mobile"><a href="creativity.html">Creativity</a></li>
+    <li class="nav-spelling hide_on_mobile"><a href="spelling.html">Spelling</a></li>
+    <li class="nav-precision hide_on_mobile"><a href="precision.html">Precision</a></li>
+    <li onclick=showSidebar()><a href="#"><svg class="menu_icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#653B2F"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+</nav>
 
     <!-- HEADER -->
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="header">
-    <figure class="separate-cell-for-category">
+    <figure class="container-for-category">
       <h1 class="h1">Strategy</h1>  
     </figure> 
+
 
   <ul class="indicator">
     <li data-filter="all" class="active"><a href="#">All</a></li>
     <li data-filter="checkers"><a href="#">checkers</a></li>
     <li data-filter="connect-4"><a href="#">connect-4</a></li>
     <li data-filter="battleship"><a href="#">battleship</a></li>
+    <li data-filter="monopoly"><a href="#">monopoly</a></li>
   </ul>
 
+<!-- This is what displays the links -->
   <div class="jump-ahead">
     <h3>Jump Ahead:</h3>
     <ul>
       <li><a href="#checkers">Checkers</a></li>
       <li><a href="#connect-4">Connect 4</a></li>
       <li><a href="#battleship">Battleship</a></li>
+      <li><a href="#monopoly">Monopoly</a></li>
     </ul>
   </div>
 
+<!-- This is the dropdown menu for the filter and sort for age-->
  <div class="container-for-filter-conditions">
   <div class="filter-condition-for-age">
     <span class="filter-by-age">Filter by Age</span>
     <select name="" id="select-age">
-      <button><option value="default">Default</option></button>
-      <button><option value="LowToHigh">High to Low</option></button>
-      <button><option value="HighToLow">Low to High</option></button>
+      <button><option value="Default">Default</option></button>
+      <button><option value="YoungestToOldest">Oldest to Youngest</option></button>
+      <button><option value="OldestToYoungest">Youngest to Oldest</option></button>
     </select>
   </div>
 
+<!-- This is the dropdown menu for the filter and sort for number of players-->
   <div class="filter-condition-for-players">
     <span class="filter-by-players">Filter by Players</span>
     <select name="button" id="select-players">
-      <option value="default">Default</option>
+      <option value="Default">Default</option>
       <option value="LowToHigh">High to Low</option>
       <option value="HighToLow">Low to High</option>
     </select>
@@ -76,18 +84,19 @@
 </div>
 </div>
 
-<!-- BODY -->
+<!-- MAIN -->
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="grid-container-for-body-text">
+  <div class="main">
   <ul class="items">
+    <!-- Board game 1-->
   <li data-category="" data-age="" data-players="">
     <figure class="board-game-section hidden">
         <h2 id="checkers">Checkers</h2>
 
-        <img src="images/checkers-pic.png" class="checkers-pic" alt="Closeup of checkers black playing against red" />
+        <img src="images/checkers-pic.png" alt="Close-up of a checkers game in progress, with black pieces competing against red pieces on a checkered board." />
 
         <figcaption class="body">
-            Checkers is a simplified version of chess, great for younger players. It features easy-to-learn rules while still offering a fun and strategic play style. Outsmart your opponent by planning your moves and capturing their pieces to win!
+          Checkers is a simplified version of chess, great for younger players. It features easy-to-learn rules while still offering a fun and strategic play style. Outsmart your opponent by planning your moves and capturing their pieces to win!
         </figcaption>
 
         <p class="age-players">
@@ -97,14 +106,15 @@
     </figure>
 </li>
 
+    <!-- Board game 2-->
   <li data-category="" data-age="" data-players="">
     <figure class="board-game-section hidden"> 
         <h2 id="connect-4">Connect 4</h2>
 
-        <img src="images/connect4-pic.png" alt="Cloeseup of connect 4 game" class="connect4-pic" />
+        <img src="images/connect4-pic.png" alt="Close-up of a Connect 4 game with red and yellow discs stacked in a grid." >
 
         <figcaption class="body">
-            This game can be picked up and played at any time. It doesn’t last too long, making it perfect for short play sessions. Be careful not to lose your focus, or you might make the wrong move and lose!
+          This game can be picked up and played at any time. It doesn’t last too long, making it perfect for short play sessions. Be careful not to lose your focus, or you might make the wrong move and lose!
         </figcaption>
 
         <p class="age-players">
@@ -114,12 +124,13 @@
     </figure>
 </li>
 
+    <!-- Board game 3-->
   <li data-category="" data-age="" data-players="">
     <figure class="board-game-section hidden"> 
         <h2 id="battleship">Battleship</h2>
-        <img src="images/battleship-pic.png" alt="Closeup of ships being hit with red missils in battleship" class="battleship-pic" />
+        <img src="images/battleship-pic.png" alt="Close-up of a Battleship game board showing ships being hit by red pegs" >
         <figcaption class="body">
-            This game starts as a guessing game but eventually becomes a strategic challenge as you try to locate and destroy the ships. Plan your moves carefully and outsmart your opponent to claim victory!
+          This game starts as a guessing game but eventually becomes a strategic challenge as you try to locate and destroy the ships. Plan your moves carefully and outsmart your opponent to claim victory!
         </figcaption>
 
         <p class="age-players">
@@ -128,14 +139,31 @@
           </p>
     </figure>
 </li>
+
+<!-- Board game 4-->
+<li data-category="" data-age="" data-players="">
+  <figure class="board-game-section hidden"> 
+      <h2 id="monopoly">Monopoly</h2>
+      <img src="images/monopoly-pic.png" alt="Close-up of a Monopoly board with dice, various cards, and plastic houses" >
+      <figcaption class="body">
+        Find out how well you can monopolize your opponent in this game of property ownership. Collect properties and bankrupt your opponent. See who can amass the most wealth and dominate the board in this strategic game! 
+      </figcaption>
+
+      <p class="age-players">
+          <span class="bold-text">Age:</span> 8+ <br>
+          <span class="bold-text">Players:</span> 2-8
+        </p>
+  </figure>
+</li>
 </ul>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
 </div>
 
 
-
-<!-- This code is sourced from Coding 2GO and Design Code Hub-->
 <script>
+
+  //Navigation Bar on Mobile
+  //This code is sourced from Coding 2GO and Design Code Hub
         function showSidebar(){
           const sidebar = document.querySelector('.sidebar')
           sidebar.style.display = 'flex'
@@ -148,7 +176,7 @@
 //This code is sourced from w3 schools
 let mybutton = document.getElementById("myBtn");
 
-  //Scroll down 20px, show the button
+  //Scroll down 20px, it will show the button reading Back to top
 window.onscroll = function () {scrollFunction()};
 
 function scrollFunction() {
@@ -168,7 +196,8 @@ function scrollFunction() {
 
 </script> 
 
-<script type="text/javascript" src="sort.js"></script>
+<!-- These are links to external javascript files -->
+<script type="text/javascript" src="sort-age.js"></script>
 <script type="text/javascript" src="sort-players.js"></script>
 <script defer src="fade-in-up-effect.js"></script>
 <script  src="function-for-active-link.js"></script>

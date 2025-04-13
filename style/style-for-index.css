@@ -20,12 +20,55 @@
     src: url('../fonts/lato-web-font/lato-bold.woff') format('woff');
   }
 
+   /* BODY
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* This makes an outline on the category link when it is focused on it using the keyboard */
+.category a:focus-visible {
+  outline: 4px solid #653B2F;   
+  outline-offset: 4px;         
+}
+
 body{
     background-color: #F6E5DC;
 }
 
 * {
     scroll-behavior: smooth;
+}
+
+.about {
+  background-color: #e7bf98;
+  border: none;
+  font-size: 1.25rem;
+  font-family: 'lato-regular';
+  border-radius: 0.5em;
+  padding: 1rem;      
+  text-align: center; 
+  position: relative;
+  left: 4rem; 
+  cursor: pointer;
+  margin-top: 0.2em;
+  margin-bottom: -2em
+}
+
+
+   /* BACK TO TOP
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  font-size: 1.25rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 0.938rem;
+  font-family: lato-regular;
+  border: 0.125em solid #e7bf98;
+  background-color: #e7bf98;
+  border-radius: 0.5em;
 }
 
 h1 {
@@ -75,15 +118,9 @@ p{
     color: #653B2F;
   }
 
-  /* This makes an outline on the category link when it is focused on it using the keyboard */
-.category a:focus-visible {
-  outline: 4px solid #653B2F;   
-  outline-offset: 4px;         
-}
-
 
 .category:hover {
-    font-weight: bold;
+    font-family: 'lato-bold';
   }
 
 .category-icon {
@@ -96,6 +133,11 @@ p{
     transform: scale(1.05); /* makes it slightly bigger */
   }
 
+  .about:hover {
+    transform: scale(1.05); /* makes it slightly bigger */
+    font-family: 'lato-bold';
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .category:hover .category-icon {
       transform: none !important;
@@ -103,16 +145,13 @@ p{
     }
   }
 
-  /*Pressing Disable Animations disables the animation*/
-  .reduce-motion .category:hover .category-icon {
-    transform: none !important;
-    transition: none !important;
-  }
-
 a, a:visited, a:hover, a:active {
     text-decoration: none;
     color: inherit;
 }
+
+     /* BREAKPOINTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 @media (max-width: 1000px) {
     .category-icon {
@@ -135,25 +174,25 @@ a, a:visited, a:hover, a:active {
 
 @media (max-width: 1000px){
     .header{
-        margin: 0 2.6vw 0 2.6vw;
+      margin: 0 2.6vw 0 2.6vw;
     }
 }
 
 /*mobile*/
 @media (max-width: 1000px){
     p{
-        font-size: 1rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+      font-size: 1rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
 }
 
 /*desktop*/
 @media (min-width: 1001px){
     p{
-        font-size: 1.25rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+      font-size: 1.25rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
 }
 
@@ -161,23 +200,44 @@ a, a:visited, a:hover, a:active {
 /*mobile*/
 @media (max-width: 1000px){
     h1{
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
 }
 /*desktop*/
 @media (min-width: 1001px){
     h1{
-        font-size: 3.9375rem;
+      font-size: 3.9375rem;
     }
 }
 
 @media (max-width: 1000px) {
     .main {
-        grid-template-columns: repeat(2, 1fr);
-        margin: 0 5vw 0 5vw;
-        row-gap: 3.2rem;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 5vw 0 5vw;
+      row-gap: 3.2rem;
     }
 }
+
+@media (max-width: 1000px) {
+.about {
+  background-color: #e7bf98;
+  border: none;
+  font-size: 1rem;
+  font-family: lato-regular;
+  border-radius: 0.5em;
+  padding: 1rem 1rem 1rem 1rem;       
+  position: relative;         
+  text-align: center; 
+  left: 2.5rem;             
+  cursor: pointer;
+}
+}
+
+/* Web fonts:
+Chunk Five (Downloaded from The Font Squirrel)
+Lato-Regular (Downloaded from Google Fonts)
+Lato-Bold (Downloaded from Google Fonts)
+*/
 
 
 

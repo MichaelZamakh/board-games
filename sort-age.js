@@ -1,9 +1,12 @@
 // This code is sourced from Design Code Hub
+//This sorts the board games by age
 (function() {
+    // This selects the container that holds all the board game items
 		
     let field = document.querySelector('.items');
     let li = Array.from(field.children);
 
+    // This filters the board games by the name given in the h2 tag from the HTML
     function FilterProduct() {
         for(let i of li){
             const name = i.querySelector('h2');
@@ -47,6 +50,7 @@
     function SortProduct() {
         let select = document.getElementById('select-age');
 
+        // This finds the age from each board game
         let ar = li.map((item) => {
             const ageSpan = item.querySelector('.age-players span:nth-child(1)');
             const ageText = ageSpan ? ageSpan.textContent.replace(/\D/g, '') : '0';
@@ -57,22 +61,25 @@
 
 
 
+        // This is the what does the sorting
         this.run = ()=>{
             addevent();
         }
         function addevent(){
             select.onchange = sortingValue;
         }
+
+        // This sorts it based on the option selected
         function sortingValue(){
         
             if (this.value === 'Default') {
                 while (field.firstChild) {field.removeChild(field.firstChild);}
                 field.append(...ar);	
             }
-            if (this.value === 'LowToHigh') {
+            if (this.value === 'YoungestToOldest') {
                 SortElem(field, li, true)
             }
-            if (this.value === 'HighToLow') {
+            if (this.value === 'OldestToYoungest') {
                 SortElem(field, li, false)
             }
         }
