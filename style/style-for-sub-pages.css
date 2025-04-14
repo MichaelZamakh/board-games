@@ -3,16 +3,12 @@
   src: url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.woff2') format('woff2'),
        url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.woff') format('woff'),
        url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.eot') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'lato-regular';
   src: url('../fonts/lato-web-font/lato-regular.woff') format('woff2');
   src: url('../fonts/lato-web-font/lato-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
@@ -99,17 +95,17 @@ body{
 
 /* HOVER LINK FOR NAVBAR*/
 /* This gives each link in the navbar its own unique colour */
-  .nav-home a:hover {
-    background-color: #e7bf98;
-    color: #000000;
-    font-family: 'lato-bold'
-  }
+.nav-home a:hover {
+  background-color: #e7bf98; 
+  color: #000000;
+  font-family: 'lato-bold'
+}
 
-  .nav-about a:hover {
-    background-color: #e7bf98;
-    color: #000000;
-    font-family: 'lato-bold'
-  }
+.nav-about a:hover {
+  background-color: #c3e0dc;
+  color: #000000;
+  font-family: 'lato-bold'
+}
 
   .nav-speed a:hover {
     background-color: #e7a299;
@@ -195,10 +191,16 @@ a:hover {
 
 /* ACTIVE LINK FOR NAVBAR*/
   /* This ensures the current page has a background on the selected page in the nav bar*/
-  a:is(:link, :active, :visited).active-about {
+  a:is(:link, :active, :visited).active-home {
     color: rgb(0, 0, 0);
     background-color: #e7bf98;
-    font-family: 'lato-bold' /* The page you are on is in bold */
+    font-family: 'lato-bold';
+  }
+
+  a:is(:link, :active, :visited).active-about {
+    color: rgb(0, 0, 0);
+    background-color: #c3e0dc;
+    font-family: 'lato-bold';
   }
 
   a:is(:link, :active, :visited).active-speed {
