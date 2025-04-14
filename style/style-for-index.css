@@ -3,16 +3,12 @@
     src: url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.woff2') format('woff2'),
          url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.woff') format('woff'),
          url('../fonts/chunk-master-2/webfonts/ChunkFive-Regular.eot') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
   }
 
   @font-face {
     font-family: 'lato-regular';
     src: url('../fonts/lato-web-font/lato-regular.woff') format('woff2'),
          url('../fonts/lato-web-font/lato-regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
   }
 
   @font-face {
@@ -38,7 +34,7 @@ body{
 }
 
 .about {
-  background-color: #e7bf98;
+  background-color: #c3e0dc;
   border: none;
   font-size: 1.25rem;
   font-family: 'lato-regular';
@@ -220,7 +216,7 @@ a, a:visited, a:hover, a:active {
 
 @media (max-width: 1000px) {
 .about {
-  background-color: #e7bf98;
+  background-color: #c3e0dc;
   border: none;
   font-size: 1rem;
   font-family: lato-regular;
