@@ -25,8 +25,7 @@ body{
     scroll-behavior: smooth;
 }
 
-
-  /* BACK TO TOP
+  /* BACK TO TOP BUTTON
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #myBtn {
   display: none;
@@ -38,7 +37,7 @@ body{
   color: rgb(0, 0, 0);
   cursor: pointer;
   padding: 0.938rem;
-  font-family: lato-regular;
+  font-family: 'lato-regular';
   border: 0.125em solid #e7bf98;
   background-color: #e7bf98;
   border-radius: 0.5em;
@@ -47,6 +46,7 @@ body{
 #myBtn:hover {
   transform: scale(1.05); /* makes it slightly bigger */
   font-family: 'lato-bold';
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); 
 }
 
   /* NAV BAR
@@ -86,7 +86,7 @@ body{
     display: flex;
     align-items: center;
     color: #653B2F;
-    font-family: lato-regular;
+    font-family: 'lato-regular';
     font-weight: normal;
     font-size: 1.125rem;
     text-transform: uppercase;
@@ -188,7 +188,6 @@ a:hover {
     display: none;
   }
 
-
 /* ACTIVE LINK FOR NAVBAR*/
   /* This ensures the current page has a background on the selected page in the nav bar*/
   a:is(:link, :active, :visited).active-home {
@@ -239,7 +238,6 @@ a:is(:link, :active, :visited).active-precision {
   font-family: 'lato-bold'
 }
 
-
   /* This makes an outline on the category link when it is focused on it using the keyboard */
   nav a:focus {
     outline: 4px solid #653B2F;
@@ -250,9 +248,22 @@ a:is(:link, :active, :visited).active-precision {
     outline: 4px solid #653B2F;
   }
 
-
    /* HEADER
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  /* Header Container */
+  .header{
+    display: flex;
+    flex-direction: column;
+    gap: 5em; /*This changes spacing between the separate sections for each board game*/
+    margin: 0 auto;
+    max-width: 50em;
+    padding: 0 0.625em;
+    /*border: 1px solid red;*/
+    margin-bottom: 3em;
+  }
+
+    /* Jump Ahead */
   .jump-ahead {
     font-family: 'lato-regular';
     color: #653B2F;
@@ -263,12 +274,11 @@ a:is(:link, :active, :visited).active-precision {
     max-width: 50em;
     padding: 0 2em;
   }
-
   
   .jump-ahead h3 {
     margin-bottom: 0.25em; /* Makes smaller spacing between jump ahead text and the links */
     font-size: 1.25rem;
-    font-family: lato-bold;
+    font-family: 'lato-bold';
   }
   
   .jump-ahead ul {
@@ -290,27 +300,16 @@ a:is(:link, :active, :visited).active-precision {
 /* This gives the links an underline when you hover over them */
   .jump-ahead a:hover {
     text-decoration: underline;
-    transition: 1s;
-    color:#155AC0; /* Gives the links a darker shade of blue as you hover over it */
-    font-family: lato-bold;
+    transition: 1s; /* Gives it 1 second to fade into darker colour */
+    color:#104697; /* Gives the links a darker shade of blue as you hover over it */
+    font-family: 'lato-bold'; /*Makes it bold when you hover over it */
   }
-
   
   .indicator {
     display: none;
   }
 
-  .header{
-    display: flex;
-    flex-direction: column;
-    gap: 5em; /*This changes spacing between the separate sections for each board game*/
-    margin: 0 auto;
-    max-width: 50em;
-    padding: 0 0.625em;
-    /*border: 1px solid red;*/
-    margin-bottom: 3em;
-  }
-
+  /* Filter Conditions */
 .container-for-filter-conditions{
   position: relative;
   /*border: 1px solid red;*/
@@ -324,7 +323,6 @@ a:is(:link, :active, :visited).active-precision {
     max-width: 50%;
     padding: 0 2.4em; /*This aligns the filter by age text with the text above it*/
     position: absolute;
-    
   }
 
   .filter-condition-for-players {
@@ -369,18 +367,88 @@ ul.items {
   margin: 0;
 }
 
+     /* BODY
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  /* Main Container */
   .main {
     display: flex;
     flex-direction: column;
     gap: 5em;
     margin: 0 auto;
-    max-width: 50%; /* This controls the main porition of my code to only take up 50% of screen width */
-    padding: 0 0.625em;
+    max-width: 50%; /* This controls the main portion of my code to only take up 50% of screen width */
+    padding: 0 0.625em; 
+    max-width: 50em;
   }
+
+  h1 {
+    font-family: 'ChunkFive', serif;
+    font-weight: normal;
+    font-size: 3.9375rem;
+    color: #000000;
+    margin-bottom: -1.5em; /*Makes smaller spacing between category text and board-game text */
+  }
+
+  .jump-ahead {
+    margin-bottom: -2em; 
+  }
+
+  h2{
+    font-family: 'lato-bold';
+    font-size: 2rem;
+    color: #653B2F;
+  }
+  
+  figure h2 {
+    margin: 0 0 0.5em 0; /*Controls spacing between title and image*/
+  }
+
+  .body{
+    color: black;
+    font-family: 'lato-regular';
+    font-size: 1.25rem;
+    margin-bottom: 1.5em; 
+    margin-top: 0.5em; 
+    max-width: 65%; /* This makes the body text take up 65% of the width in the main section when on desktop*/
+    line-height: 1.3;
+  }
+
+  .age-players{
+    color: black;
+    font-family: 'lato-regular';
+    font-size: 1.25rem;
+    margin: 0;
+    line-height: 1.3;         
+  }
+
+/*The text reading: "age" and "players" is bolded here*/
+.bold-text {
+    font-family: 'lato-bold';
+}
+
+ul.items {
+  display: flex;
+  flex-direction: column;
+  gap: 5em; /* This controls spacing between each board game */
+}
+
+figure {
+    display: flex; /* This makes the images and text respond flexibly*/
+    flex-direction: column; 
+}
+
+img {
+    max-width: 100%;
+    height: auto; 
+    align-items: center;
+}
+
+p {
+    margin-top: 0.625em;
+}
 
    /* FADE IN UP EFFECT 
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.hidden {
+  .hidden {
     opacity: 0;
     transition: all 1s;
   }
@@ -418,85 +486,14 @@ ul.items {
   animation-name: fadeInUp;
 }
 
-     /* BODY
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  h1 {
-    font-family: 'ChunkFive', serif;
-    font-weight: normal;
-    font-size: 3.9375rem;
-    color: #000000;
-    margin-bottom: -1.5em; /*Makes smaller spacing between category text and board-game text */
-  }
-
-  .jump-ahead {
-    margin-bottom: -2em; 
-  }
-
-  h2{
-    font-family: lato-bold;
-    font-size: 2rem;
-    color: #653B2F;
-  }
-
-  
-  figure h2 {
-    margin: 0 0 0.5em 0; /*Controls spacing between title and image*/
-  }
-
-
-  .body{
-    color: black;
-    font-family: lato-regular;
-    font-size: 1.25rem;
-    margin-bottom: 1.5em; 
-    margin-top: 0.5em; 
-    max-width: 65%;
-  }
-
-  .age-players{
-    color: black;
-    font-family: lato-regular;
-    font-size: 1.25rem;
-    margin: 0;         
-  }
-
-/*The text reading: "age" and "players" is bolded here*/
-.bold-text {
-    font-weight: bold;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 50em;
-  padding: 0 0.625em;
-  /* border: 1px solid red; */
-}
-
-ul.items {
-  display: flex;
-  flex-direction: column;
-  gap: 5em; /* This controls spacing between each board game */
-}
-
-figure {
-    display: flex; /* This makes the images and text respond flexibly*/
-    flex-direction: column; 
-}
-
-img {
-    max-width: 100%;
-    height: auto; 
-    align-items: center;
-}
-
-p {
-    margin-top: 0.625em;
-}
-
   /* BREAK POINTS
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media (max-width: 430px) {
+    .main, .header {
+      padding: 0 0em;
+    }
+  }
+
 /* This hides the navbar on mobile */
 @media(max-width: 1076px){
     .hide_on_mobile{
@@ -511,7 +508,7 @@ p {
     }
   }
 
-/* This moves the menu icon to the top right corner w*/
+/* This moves the menu icon to the top right corner when in mobile*/
   @media(max-width: 1076px) {
     nav{
         padding: 0 0.625em;
@@ -524,14 +521,6 @@ p {
       font-size: 1rem;
     }
   }
-
-@media (max-width: 900px) {
-        .grid-container-for-body-text {
-          width: 100%;      
-          padding: 0;      
-          margin: 0 auto;   
-        }
-      }
 
 /*The images take up the whole container width on mobile*/
     @media(max-width: 900px){
@@ -583,7 +572,7 @@ p {
     @media(max-width: 900px){
       .filter-by-age {
         font-size: 1rem;
-        font-family: lato-bold;
+        font-family: 'lato-bold';
         color: #653B2F;
       }
     }
@@ -591,7 +580,7 @@ p {
     @media(max-width: 900px){
       .filter-by-players {
         font-size: 1rem;
-        font-family: lato-bold;
+        font-family: 'lato-bold';
         color: #653B2F;
       }
     }
@@ -602,7 +591,6 @@ p {
     font-size: 1rem;
   }
 }
-
 
 /* This makes the spacing between the filter by age and players consistent with how it was in desktop*/
 @media (max-width: 900px) {
@@ -617,6 +605,15 @@ p {
     padding-left: 1em;
   }
 }
+
+/* Web Font Credits:
+Chunk Five (Downloaded from The Font Squirrel)
+Lato-Regular (Downloaded from Google Fonts)
+Lato-Bold (Downloaded from Google Fonts)
+*/
+
+
+
 
 
 
